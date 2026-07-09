@@ -68,7 +68,6 @@ bool DeInitQueue(LidarDataQueue *queue) {
 
   if (queue->storage_packet) {
     delete[] queue->storage_packet;
-    queue->storage_packet = nullptr;
   }
 
   queue->rd_idx = 0;

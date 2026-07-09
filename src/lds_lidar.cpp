@@ -197,10 +197,10 @@ bool LdsLidar::LivoxLidarStart() {
 
 int LdsLidar::DeInitLdsLidar(void) {
   if (!is_initialized_) {
-    return 0;
+    printf("LiDAR data source is not exit");
+    return -1;
   }
 
-  is_initialized_ = false;
   if (lidar_summary_info_.lidar_type & kLivoxLidarType) {
     LivoxLidarSdkUninit();
     printf("Livox Lidar SDK Deinit completely!\n");
